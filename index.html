@@ -14,20 +14,13 @@
 </head>
 <body>
     <!-- Task 5: Bootstrap Navbar with the search form inside it -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">TV Show Viewer</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <form class="d-flex" id="search-form">
-                    <!-- Task 1: Text input for show search -->
-                    <input class="form-control me-2" type="search" id="input-show" name="input-show" placeholder="Search for a show" aria-label="Search">
-                    <!-- Task 1: Submit button for form -->
-                    <button class="btn btn-outline-success" type="submit" id="submit-data">Search</button>
-                </form>
-            </div>
+            <form class="d-flex" role= "search" id = "search-form">
+                <input class="form-control me-2" type="search" id="input-show" placeholder="Search show" aria-label="Search">
+                <button class="btn btn-outline-success" id="submit-data" type="submit">Search</button>
+            </form>
         </div>
     </nav>
 
