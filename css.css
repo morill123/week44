@@ -48,7 +48,7 @@ body {
 }
 
 /* Task 3: Media queries for devices narrower than 800px */
-@media (max-width: 799px) {
+@media (max-width: 800px) {
     .show-data img {
         margin: auto;
     }
