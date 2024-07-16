@@ -1,13 +1,16 @@
+/* Task 2: Styling for body */
 body {
     background-color: #eceff1;
     font-family: 'Roboto', sans-serif;
 }
 
+/* Task 2: Styling for the show-container */
 .show-container {
     padding-left: 10px;
     padding-right: 10px;
 }
 
+/* Task 2: Styling for each show-data element */
 .show-data {
     width: 100%;
     background-color: #cfd8dc;
@@ -15,38 +18,40 @@ body {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Task 2: Centering the text in h1 inside show-data */
 .show-data h1 {
     text-align: center;
 }
 
+/* Task 2: Making the image a block element */
 .show-data img {
     display: block;
+    margin: auto; /* Adjust image alignment */
 }
 
+/* Task 2: Ensuring show-info takes full width */
 .show-info {
     width: 100%;
 }
 
-/* Media queries for desktop view */
+/* Task 2: Media queries for devices wider than 800px */
 @media (min-width: 800px) {
     .show-data {
         display: flex;
     }
-
     .show-info {
         padding: 10px;
     }
 }
 
-/* Media queries for mobile view */
-@media (max-width: 800px) {
+/* Task 3: Media queries for devices narrower than 800px */
+@media (max-width: 799px) {
     .show-data img {
         margin: auto;
     }
-
     .show-info p {
         text-align: center;
         padding: 10px;
