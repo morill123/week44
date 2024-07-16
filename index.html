@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TV Show Viewer</title>
-    <!-- 引用本地字体文件 -->
-    <link rel="stylesheet" href="fonts/roboto.css">
+    <!-- Directly importing Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Adding Bootstrap CSS with integrity and crossorigin attributes for security -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" 
     rel="stylesheet" 
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
     crossorigin="anonymous">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
     <!-- Navigation bar -->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">TV Show Viewer</a>
-            <form class="d-flex" id="search-form">
-                <input class="form-control me-2" type="search" id="input-show" placeholder="Search for a show" aria-label="Search">
+            <form class="d-flex" role= "search" id = "search-form">
+                <input class="form-control me-2" type="search" id="input-show" placeholder="Search show" aria-label="Search">
                 <button class="btn btn-outline-success" id="submit-data" type="submit">Search</button>
             </form>
         </div>
     </nav>
 
     <!-- Show container -->
-    <div class="show-container container mt-4"></div>
+    <div class="show-container"></div>
 
     <!-- Adding Bootstrap JS with integrity and crossorigin attributes for security -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
