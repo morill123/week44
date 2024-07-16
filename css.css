@@ -29,7 +29,7 @@ body {
 /* Task 2: Making the image a block element */
 .show-data img {
     display: block;
-    margin: auto; /* Adjust image alignment */
+    margin: 0; /* Ensure the margin is set to 0 by default */
 }
 
 /* Task 2: Ensuring show-info takes full width */
@@ -50,7 +50,7 @@ body {
 /* Task 3: Media queries for devices narrower than 800px */
 @media (max-width: 800px) {
     .show-data img {
-        margin: auto;
+        margin: auto; /* Center the image horizontally */
     }
     .show-info p {
         text-align: center;
