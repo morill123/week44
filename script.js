@@ -1,33 +1,22 @@
-document.getElementById('search-form').addEventListener('submit', function (e) {
-    e.preventDefault();
+document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault();
     const query = document.getElementById('input-show').value;
-    fetchShows(query);
-});
-
-function fetchShows(query) {
     fetch(`https://api.tvmaze.com/search/shows?q=${query}`)
         .then(response => response.json())
-        .then(data => displayShows(data));
-}
-
-function displayShows(shows) {
-    const showContainer = document.querySelector('.show-container');
-    showContainer.innerHTML = '';
-
-    shows.forEach(showData => {
-        const show = showData.show;
-        const showElement = document.createElement('div');
-        showElement.classList.add('show-data');
-
-        const showImage = show.image ? show.image.medium : 'https://via.placeholder.com/210x295?text=No+Image';
-        showElement.innerHTML = `
-            <img src="${showImage}" alt="${show.name}">
-            <div class="show-info">
-                <h1>${show.name}</h1>
-                ${show.summary}
-            </div>
-        `;
-
-        showContainer.appendChild(showElement);
-    });
-}
+        .then(data => {
+            const showContainer = document.querySelector('.show-container');
+            showContainer.innerHTML = ''; // 清除之前的搜索结果
+            data.forEach(item => {
+                const showData = document.createElement('div');
+                showData.classList.add('show-data');
+                showData.innerHTML = `
+                    <img src="${item.show.image ? item.show.image.medium : ''}" alt="${item.show.name}">
+                    <div class="show-info">
+                        <h1>${item.show.name}</h1>
+                        <p>${item.show.summary}</p>
+                    </div>
+                `;
+                showContainer.appendChild(showData);
+            });
+        });
+});
